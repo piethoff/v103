@@ -15,7 +15,7 @@ mpl.rcParams.update({
 data = np.genfromtxt('content/rund_einseit.txt', unpack=True)
 
 x = 0.5 * (data[0] /100)**2 - (data[0] / 300)**3
-y= (data[2] -data[1]) /1000
+y= (data[1] -data[2]) /1000
 
 plt.xlabel(r'$g(x)/\si{\cubic\meter}$')
 plt.ylabel(r'$D(x)/\si{\meter}$')
@@ -45,7 +45,7 @@ plt.clf()
 data = np.genfromtxt('content/eckig_einseit.txt', unpack=True)
 
 x = 0.5 * (data[0] /100)**2 - (data[0] / 300)**3
-y= (data[2] -data[1]) /1000
+y= (data[1] -data[2]) /1000
 
 plt.xlabel(r'$g(x)/\si{\cubic\meter}$')
 plt.ylabel(r'$D(x)/\si{\meter}$')
