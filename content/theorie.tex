@@ -1,5 +1,62 @@
 \section{Zielsetzung}
+In diesem Versuch soll der Elastizitätsmodul von verschiedenen Metallen bestimmt werden.
 \section{Theorie}
 \label{sec:Theorie}
-
-\cite{sample}
+Für Festkörper der Länge $L$ kann eine kleine Änderung der Länge $\symup{\Delta}L$ 
+durch einen einwirkenden Druck $\sigma$
+mithilfe eines linearen Federkraftgesetzes beschrieben werden:
+\begin{equation}
+    \sigma = E\frac{\symup{\Delta}L}{L}
+\end{equation}
+$E$ ist der Elastizitätsmodul und abhängig vom verwendeten Material.
+\subsection{Einseitig eingespannter Stab}
+Aus diesem Zusammenhang lässt sich weiterhin folgern, wie sich ein Stab verhält, der gebogen wird.
+Im ersten, nicht trivialen, Fall ist ein Stab einseitig eingespannt und auf das nicht eingespannte 
+Ende wirkt eine Kraft und somit auf den gesamten Stab ein Drehmoment.
+Dieses hat am Punkt $x$ die Form
+\begin{equation}
+    M_F = F\cdot(L-x),
+\end{equation}
+mit $F$ als äußerer Kraft am Punkt $x=L$.
+Im Stab selbst entsteht in jeder Querschnittsfläche $Q$ ein gegengerichtetes Drehmoment durch die 
+Streckung der oberen und Stauchung der unteren Biegungsschichten.
+Es folgt
+\begin{equation}
+    M_\sigma = \int_Q y \sigma(y) \symup{dq},
+\end{equation}
+mit $y$ als Abstand zur mittleren Schicht auf $Q$.
+Mit der Annahme, dass der Stab lokal durch eine Krümmung $R$ beschrieben werden kann,
+folgt aus geometrischen Überlegungen eine Variante des Federkraftgesetzes
+\begin{equation}
+    \sigma(y) = E\frac{y}{R}
+\end{equation}
+und ein Zusammenhang mit der Auslenkung $D(x)$
+\begin{equation}
+    \frac{\symup{d}^2D}{\symup{dx}^2} \approx \frac{1}{R}.
+\end{equation}
+Schlussendlich folgt daraus für die Auslengung
+\begin{equation}
+    D(x) = \frac{F}{2E\symbf{I}}\left(Lx^2-\frac{x^3}{3}\right),
+\end{equation}
+mit $\symbf{I}$ als Flächenträgheitsmoment.
+\subsection{Beidseitig aufgehängter Stab}
+Der Fall, dass der Stab an zwei Punkten aufliegt und die Kraft in der Mitte dieser 
+Auflagepunkte wirkt, kann auf zwei Biegungen des ersten Typs mit der halben Kraft zurückgeführt werden.
+Es ergeben sich folgende Drehmomente für die jeweiligen Stabhälften:
+\begin{align}
+    M_F = -\frac{F}{2}x & 
+    M_F = -\frac{F}{2}(L-x)
+\end{align}
+Aus den gleichen Annahmen wie oben folgt weiter:
+\begin{align}
+    \frac{\symup{d}^2D}{\symup{dx}^2} \approx -\frac{F}{2E\symbf{I}} x
+    \frac{\symup{d}^2D}{\symup{dx}^2} \approx -\frac{F}{2E\symbf{I}} (L-x)
+\end{align}
+Es ergibt sich mit der Forderung nsch Stetigkeit und \mbox{$\frac{\symup{d}D}{\symup{dx}}(x=0) = 0$}:
+\begin{equation}
+    D(x) = 
+    \begin{cases}
+    \frac{F}{48E\symbf{I}}(3L^2x-4x^3) & 0 \leq x \leq \frac{L}{2}
+    \frac{F}{48E\symbf{I}}(4x^3-12Lx^2+9L^2x -L^3) & \frac{L}{2} \leq x \leq L
+    \end{cases}
+\end{equation}
