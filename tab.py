@@ -27,17 +27,17 @@ def columnsettings(a):
     for i in a:
         if not num.match(str(i)):
             return "c"
-        c = nv.match(str(i))
-        lengthnv = len(a.group()) if a else 0
-        a = nn.match(str(i))
-        lengthnn = len(a.group()) if a else 0
-        b = u.match(str(i))
-        lengthu = len(b.group()) if b else 0
-        a = e.match(str(i))
-        lengthe = len(a.group()) if a else 0
-        if(c):
-            if(v.match(b.group())): vz = "+"
-        if(b):
+        x = nv.match(str(i))
+        lengthnv = len(x.group()) if x else 0
+        y = nn.match(str(i))
+        lengthnn = len(y.group()) if y else 0
+        z = u.match(str(i))
+        lengthu = len(z.group()) if z else 0
+        y = e.match(str(i))
+        lengthe = len(y.group()) if y else 0
+        if(x):
+            if(v.match(x.group())): vz = "+"
+        if(z):
             if(k.match(b.group())): lengthu -= 1
         if(lengthnv > lnv): lnv = lengthnv
         if(lengthnn > lnn): lnn = lengthnn

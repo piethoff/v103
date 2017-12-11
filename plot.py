@@ -71,3 +71,40 @@ plt.tight_layout()
 plt.legend()
 plt.savefig('build/e_einseit.pdf')
 plt.clf()
+
+
+
+data = np.genfromtxt("content/eckig_beidseit.txt", unpack=True)
+data[0] /= 100
+data[1] /= 1000
+data[2] /= 1000
+L = 0.55
+mitte = data[0][int(data[0].size/2)]
+
+def g(x, A):
+    y = np.array([])
+    for i in x:
+        if(i <= mitte):
+            y = np.append(y, A*(3*L**2*i-4*i**3))
+        else:
+            y = np.append(y, A*(4*i**3-12*L*i**2+9*L**2*i-L**3))
+    return y
+
+data[1] -= data[2]
+x= np.linspace(data[0][0]-0.05, data[0][-1]+0.05, 1000)
+
+plt.plot(data[0], data[1], ".", color="xkcd:blue", label="Messwerte")
+
+params, covar = curve_fit(g, data[0], data[1])
+plt.plot(x, g(x, *params), color="xkcd:orange", label=r"Regression")
+uparams = unumpy.uarray(params, np.sqrt(np.diag(covar)))
+print("Beidseitige Einspannung:", uparams)
+
+plt.ylabel(r"$D(x)/\si{\meter}$")
+plt.xlabel(r"$x/\si{\meter}$")
+
+plt.grid()
+plt.tight_layout()
+plt.legend()
+plt.savefig("build/e_beidseit.pdf")
+plt.clf()

@@ -34,29 +34,39 @@ und ein Zusammenhang mit der Auslenkung $D(x)$
 \begin{equation}
     \frac{\symup{d}^2D}{\symup{dx}^2} \approx \frac{1}{R}.
 \end{equation}
-Schlussendlich folgt daraus für die Auslengung
+Schlussendlich folgt daraus für die Auslenkung
 \begin{equation}
-    D(x) = \frac{F}{2E\symbf{I}}\left(Lx^2-\frac{x^3}{3}\right),
+    D(x) = \frac{F}{2EI}\left(Lx^2-\frac{x^3}{3}\right),
 \end{equation}
-mit $\symbf{I}$ als Flächenträgheitsmoment.
+mit $I$ als Flächenträgheitsmoment:
+\begin{equation}
+    I = \int_Qy^2\symup{dq}
+\end{equation}
 \subsection{Beidseitig aufgehängter Stab}
 Der Fall, dass der Stab an zwei Punkten aufliegt und die Kraft in der Mitte dieser
 Auflagepunkte wirkt, kann auf zwei Biegungen des ersten Typs mit der halben Kraft zurückgeführt werden.
 Es ergeben sich folgende Drehmomente für die jeweiligen Stabhälften:
 \begin{align}
-    M_F = -\frac{F}{2}x &
-    M_F = -\frac{F}{2}(L-x)
+    M_f =
+    \begin{dcases}
+        -\frac{F}{2}x       & 0 \leq x \leq \frac{L}{2}\\
+        -\frac{F}{2}(L-x)   & \frac{L}{2} \leq x \leq L
+    \end{dcases}
 \end{align}
 Aus den gleichen Annahmen wie oben folgt weiter:
 \begin{align}
-    \frac{\symup{d}^2D}{\symup{dx}^2} \approx -\frac{F}{2E\symbf{I}} x
-    \frac{\symup{d}^2D}{\symup{dx}^2} \approx -\frac{F}{2E\symbf{I}} (L-x)
+    \frac{\symup{d}^2D}{\symup{dx}^2} \approx 
+    \begin{dcases}
+        -\frac{F}{2EI} x     & 0 \leq x \leq \frac{L}{2}\\
+        -\frac{F}{2EI} (L-x) & \frac{L}{2} \leq x \leq L
+    \end{dcases}    
 \end{align}
-Es ergibt sich mit der Forderung nsch Stetigkeit und \mbox{$\frac{\symup{d}D}{\symup{dx}}(x=0) = 0$}:
-%\begin{equation}
-%    D(x) =
-%    \begin{cases}
-%    \frac{F}{48E\symbf{I}}(3L^2x-4x^3) & 0 \leq x \leq \frac{L}{2}
-%    \frac{F}{48E\symbf{I}}(4x^3-12Lx^2+9L^2x -L^3) & \frac{L}{2} \leq x \leq L
-%    \end{cases}
-%\end{equation}
+Es ergibt sich mit der Forderung nach Stetigkeit und \mbox{$\frac{\symup{d}D}{\symup{dx}}(x=0) = 0$}:
+\begin{equation}
+    D(x) =
+    \begin{dcases}
+    \frac{F}{48EI}(3L^2x-4x^3) & 0 \leq x \leq \frac{L}{2}\\
+    \frac{F}{48EI}(4x^3-12Lx^2+9L^2x -L^3) & \frac{L}{2} \leq x \leq L
+    \end{dcases}
+\end{equation}
+Somit ist die Auslenkung am Punkt $x$ vollständig beschrieben.

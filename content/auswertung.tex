@@ -1,6 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
+%
 \subsection{Bestimmung des runden Stabes bei einseitiger Belastung}
 Der Stab wird dabei so eingespannt, dass dieser $50\si{\centi\meter}$ überhängt.
 An diesen wird ein Gewicht von $m_g=742.1\si{\gram}$ angehangen.
@@ -52,7 +52,7 @@ Durch diese wurde eine Ausgleichsgerade ,mittels linearer Regression, gezogen.
     \caption{Messwerte und Ausgleichsgerade für die einseitige Belastung des ruden Stabs}
     \label{fig:plot1}
 \end{figure}
-
+%
 Die Ausgleichsgerade besitzt eine Steigung von $m=(0.0475\pm 0.001)\si{\per\meter\squared}$
 Das Elastizitätsmodul lässt sich mit Formel durch
 \begin{equation}
@@ -127,3 +127,60 @@ Der Stab besitzt ein Elastizitätsmodul von:
 \begin{equation*}
   E= (1.308\pm 0.048)\cdot10^{11} \si{\newton\per\meter\squared}
 \end{equation*}
+%
+\subsection{Bestimmung des Elastizitätsmoduls mihilfe eine beiseitig aufliegenden Stabs}
+Im Gegensatz zu den vorausgegangenen Messungen ist die überstehende Länge des Stabs hier nicht $\SI{50}{\centi\meter}$, 
+sondern $\SI{100000000}{\centi\meter}$.
+Das Gewicht wurde aufgrund der geringen Auslenkung so groß wie möglich gewählt, hier \SI{1000000}{\gram}.
+Es ergeben sich folgende, in Tabelle \ref{tab:eckig_beidseit} aufgetragene, Werte:
+\begin{table}[H]
+    \centering
+    \caption{Messwerte für einen beidseitig aufliegenden Stab.}
+    \label{tab:eckig_beidseit}
+    \begin{tabular}{S[table-format=2.1(0)e0] S[table-format=1.2(0)e0] S[table-format=1.2(0)e0] }
+        \toprule
+        {$x/\si{\centi\meter}$} & {$D_0/\si{\milli\meter}$} & {$D_m/\si{\milli\meter}$} \\
+        \midrule
+        4.0     & 9.01  & 8.34  \\
+        6.0     & 9.02  & 8.11  \\
+        8.0     & 9.0   & 7.78  \\
+        10.0    & 8.97  & 7.53  \\
+        12.0    & 9.0   & 7.25  \\
+        14.0    & 8.98  & 7.0   \\
+        16.0    & 8.96  & 6.42  \\
+        18.0    & 8.94  & 6.55  \\
+        20.0    & 8.96  & 6.42  \\
+        22.0    & 8.96  & 6.22  \\
+        24.0    & 8.91  & 6.16  \\
+        26.0    & 8.91  & 6.09  \\
+        30.0    & 8.92  & 6.11  \\
+        32.0    & 8.92  & 6.22  \\
+        34.0    & 8.94  & 6.32  \\
+        36.0    & 8.92  & 6.46  \\
+        38.0    & 8.91  & 6.57  \\
+        40.0    & 8.89  & 6.77  \\
+        42.0    & 8.89  & 7.01  \\
+        44.0    & 8.9   & 7.25  \\
+        46.0    & 8.9   & 7.53  \\
+        48.0    & 8.89  & 7.81  \\
+        50.0    & 6.74  & 5.9   \\
+        52.0    & 6.76  & 6.23  \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\noindent Diese Werte werden in Abblindung \ref{fig:dubbi} aufgetragen und gemäß der Vorschrift aus Gleichung \eqref{eq:dubbi} 
+wird ein Curve-Fit erstellt und ist ebenfalls aufgetragen.
+Der Fit-Parameter ist hier:
+\begin{equation}
+    A = \frac{F}{48EI} = \SI{999.99\pm999}{\per\meter\squared}
+\end{equation}
+Das Trägheitsmoment lässt sich gemäß der Gleichung \eqref{eq:dubbi} berechnen und ergibt sich zu
+\begin{align}
+    I &= \int y^2*z0 \symup{dy} \\
+      &= \frac{y_0^3z_0}{12},
+\end{align}
+wobei $z_0=\SI{999}{\centi\meter}$ und $y_0=\SI{999}{\centi\meter}$ die Abmessungen der Querschnittsfläche des Stabs sind.
+Es ergibt sich somit ein Elastizitätsmodul von
+\begin{equation}
+    E = \SI{999}{\newton\per\meter\squared}.
+\end{equation}
