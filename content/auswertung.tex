@@ -2,19 +2,19 @@
 \label{sec:Auswertung}
 %
 \subsection{Bestimmung des Elastizitätsmoduls eines runden Messingtabs bei einseitiger Belastung}
-Der Stab wird dabei so eingespannt, dass dieser $50\si{\centi\meter}$ überhängt.
-An diesen wird ein Gewicht von $m_g=\SI{742.1}{\gram}$ angehangen.
+Der Stab wird dabei so eingespannt, dass dieser $\SI{50}{\centi\meter}$ überhängt.
+An diesen wird ein Gewicht von $m=\SI{742.1}{\gram}$ angehangen.
 Auf den Stab wirkt also eine Kraft von:
 \begin{equation}
-  F= m_g \cdot g = \SI{7.28}{\newton}
+  F= m g = \SI{7.28}{\newton}
 \end{equation}
-Die Messung wird wie in Kapitel 2 beschrieben durchgeführt.
-Die so erhaltenen Werte sind in Tabelle \ref{tab:r_einseit} aufgetragen.
+Die Messung wird wie in Kapitel 2 beschrieben durchgeführt und die so erhaltenen Werte sind in 
+Tabelle \ref{tab:r_einseit} aufgetragen.
 \begin{table}[H]
     \centering
     \caption{Messwerte des runden Stabs bei einseitiger Belastung.}
     \label{tab:r_einseit}
-    \begin{tabular}{S[table-format=1.0] S[table-format=2.2] S[table-format=2.2] }
+    \begin{tabular}{S[table-format=2.0] S[table-format=2.2] S[table-format=2.2] }
         \toprule
         {$x/\si{\centi\meter}$} & {$D_0/\si{\milli\meter}$} & {$D_m/\si{\milli\meter}$} \\
         \midrule
@@ -44,8 +44,8 @@ Die so erhaltenen Werte sind in Tabelle \ref{tab:r_einseit} aufgetragen.
         \bottomrule
     \end{tabular}
 \end{table}
-\noindent Die Werte für $D(x)$ und $g(x)=Lx^2-\frac{x^3}{3}$ sind in Abbildung \ref{fig:plot1} aufgetragen.
-Durch diese wurde eine Ausgleichsgerade mittels linearer Regression gezogen.
+\noindent Die Werte für $D(x)$ und $g(x)=Lx^2-\frac{x^3}{3}$ sind in Abbildung \ref{fig:plot1} 
+aufgetragen und durch diese wurde eine Ausgleichsgerade mittels linearer Regression gezogen.
 \begin{figure}
     \centering
     \includegraphics{build/r_einseit.pdf}
@@ -53,37 +53,39 @@ Durch diese wurde eine Ausgleichsgerade mittels linearer Regression gezogen.
     \label{fig:plot1}
 \end{figure}
 %
-Die Ausgleichsgerade besitzt eine Steigung von $m=\SI[per-mode=reciprocal]{0.0663\pm 0.002}{\per\meter\squared}$.
+\noindent Die Ausgleichsgerade besitzt eine Steigung von $m=\SI[per-mode=reciprocal]{0.0663\pm 
+0.002}{\per\meter\squared}$.
 Der Elastizitätsmodul lässt sich nach Gleichung \eqref{eq:e_aus} durch
 \begin{equation}
   E=\frac{F}{2mI}
 \end{equation}
 bestimmen.
-$I$ ist hier das Flächenträgheitsmoment, welches sich nach berechnen lässt.
+$I$ ist hier das Flächenträgheitsmoment, welches sich wie folgt berechnen lässt.
 Aufgrund der Symetrie werden Zylinderkoordinaten verwendet:
 \begin{equation}
   I=\int_0^{2\pi} \int_0^R r^3 \sin^2{\phi} dr d\phi=\frac{\pi}{4}R^4
 \end{equation}
-Der Stab besitzt einen Durchmesser von $Q=1\si{\centi\meter}$.
-Damit ergibt sich ein FläFlächenträgheitsmoment von:
+Der Stab besitzt einen Durchmesser von $Q=\si[per-mode=reciprocal]{\per\centi\meter}$, wodurch 
+sich ein Flächenträgheitsmoment ergibt von:
 \begin{equation*}
   I=\SI{4.91e-10}{\meter\tothe{4}}
 \end{equation*}
 Mit den so errechneten Werten ergibt sich ein Elastizitätsmodul von:
 \begin{equation*}
-  E=(1.118\pm0.003)10^{11}\si{\newton\per\meter\squared}
+  E=\SI{1.118\pm0.003e11}{\newton\per\meter\squared}
 \end{equation*}
 Die Abweichung errechnet sich hier über Gaußsche Fehlerfortpflanzung.
-\subsection{Bestimmung des Elastizitätsmoduls eines eckigen Aluminiumtabs bei einseitiger Belastung}
-Analog zum runden Stab gestaltet sich die Messung für den eckigen Stab.
-An diesen wird die Auslenkung über ein Gewicht mit der Masse $m_g=\SI{1211.5}{\gram}$ realisiert.
+%
+\subsection{Bestimmung des Elastizitätsmoduls eines eckigen Aluminiumstabs bei einseitiger Belastung}
+Die Messung gestaltet sich analog zu der vorausgegangenen.
+An diesen wird die Auslenkung über ein Gewicht mit der Masse $m=\SI{1211.5}{\gram}$ realisiert.
 Auf den Stab wirkt dann eine Kraft von $F=\SI{11.88}{\newton}$.
 Die erhaltenen Messwerte aus Tabelle \ref{tab:e_einseit} sind in Abbildung \ref{fig:plot2} aufgetragen.
 \begin{table}[H]
     \centering
     \caption{Messwerte des eckigen Stabs bei einseitiger Belastung.}
     \label{tab:e_einseit}
-    \begin{tabular}{S[table-format=1.0] S[table-format=2.2] S[table-format=2.2] }
+    \begin{tabular}{S[table-format=2.0] S[table-format=2.2] S[table-format=2.2] }
         \toprule
         {$x/\si{\centi\meter}$} & {$D_0/\si{\milli\meter}$} & {$D_m/\si{\milli\meter}$} \\
         \midrule
@@ -119,63 +121,64 @@ Die erhaltenen Messwerte aus Tabelle \ref{tab:e_einseit} sind in Abbildung \ref{
     \caption{Messwerte und Ausgleichsgerade für die einseitige Belastung des eckigen Stabs.}
     \label{fig:plot2}
 \end{figure}
-In Abbidung \ref{fig:plot2} ist zusätzlich noch eine Ausgleichsgerade, mit einer Steigung $m=\SI[per-mode=reciprocal]{0.0764\pm0.001}{\per\meter\squared}$, aufgetragen.
+\noindent In Abbildung \ref{fig:plot2} ist zusätzlich noch eine Ausgleichsgerade, mit einer 
+Steigung $m=\SI[per-mode=reciprocal]{0.0764\pm0.001}{\per\meter\squared}$, aufgetragen.
 Der Stab besitzt ein Flächenträgheitsmoment von:
 \begin{equation*}
-  I=\int_Q y^2 dq(y) = \frac{1}{12}\cdot (0.01)^4\si{\meter} = 8.33\cdot 10^{-10}\si{\meter}^4
+  I=\int_Q y^2 dq(y) = \frac{(\SI{0.01}{\meter})^4}{12} = \SI{8.33e-10}{\meter\tothe{4}}
 \end{equation*}
 Der Stab besitzt ein Elastizitätsmodul von:
 \begin{equation*}
-  E= (9.334\pm 0.122)\cdot10^{10} \si{\newton\per\meter\squared}
+  E= \SI{9.334\pm0.122e10}{\newton\per\meter\squared}
 \end{equation*}
 Die Abweichung errechnet sich hier über Gaußsche Fehlerfortpflanzung.
 %
 \subsection{Bestimmung des Elastizitätsmoduls mihilfe eines beidseitig aufliegenden Aluminiumtabs}
 Im Gegensatz zu den vorausgegangenen Messungen ist die überstehende Länge des Stabs hier nicht $\SI{50}{\centi\meter}$,
-sondern $\SI{55.5}{\centi\meter}$.
+sondern $L=\SI{55.5}{\centi\meter}$.
 Das Gewicht wurde aufgrund der geringen Auslenkung so groß wie möglich gewählt, hier $m=\SI{4699.8}{\gram}$.
 Es ergeben sich folgende, in Tabelle \ref{tab:eckig_beidseit} aufgetragene, Werte:
 \begin{table}[H]
     \centering
-    \caption{Messwerte für einen beidseitig aufliegenden Stab.}
+    \caption{Messwerte für einen beidseitig aufliegenden, eckigen Stab.}
     \label{tab:eckig_beidseit}
-    \begin{tabular}{S[table-format=2.1(0)e0] S[table-format=1.2(0)e0] S[table-format=1.2(0)e0] }
+    \begin{tabular}{S[table-format=2.0(0)e0] S[table-format=1.2(0)e0] S[table-format=1.2(0)e0] }
         \toprule
         {$x/\si{\centi\meter}$} & {$D_0/\si{\milli\meter}$} & {$D_m/\si{\milli\meter}$} \\
         \midrule
-        4.0     & 9.01  & 8.34  \\
-        6.0     & 9.02  & 8.11  \\
-        8.0     & 9.0   & 7.78  \\
-        10.0    & 8.97  & 7.53  \\
-        12.0    & 9.0   & 7.25  \\
-        14.0    & 8.98  & 7.0   \\
-        16.0    & 8.96  & 6.42  \\
-        18.0    & 8.94  & 6.55  \\
-        20.0    & 8.96  & 6.42  \\
-        22.0    & 8.96  & 6.22  \\
-        24.0    & 8.91  & 6.16  \\
-        26.0    & 8.91  & 6.09  \\
-        30.0    & 8.92  & 6.11  \\
-        32.0    & 8.92  & 6.22  \\
-        34.0    & 8.94  & 6.32  \\
-        36.0    & 8.92  & 6.46  \\
-        38.0    & 8.91  & 6.57  \\
-        40.0    & 8.89  & 6.77  \\
-        42.0    & 8.89  & 7.01  \\
-        44.0    & 8.9   & 7.25  \\
-        46.0    & 8.9   & 7.53  \\
-        48.0    & 8.89  & 7.81  \\
-        50.0    & 6.74  & 5.9   \\
-        52.0    & 6.76  & 6.23  \\
+        4       & 9.01  & 8.34  \\
+        6       & 9.02  & 8.11  \\
+        8       & 9.0   & 7.78  \\
+        10      & 8.97  & 7.53  \\
+        12      & 9.0   & 7.25  \\
+        14      & 8.98  & 7.0   \\
+        16      & 8.96  & 6.42  \\
+        18      & 8.94  & 6.55  \\
+        20      & 8.96  & 6.42  \\
+        22      & 8.96  & 6.22  \\
+        24      & 8.91  & 6.16  \\
+        26      & 8.91  & 6.09  \\
+        30      & 8.92  & 6.11  \\
+        32      & 8.92  & 6.22  \\
+        34      & 8.94  & 6.32  \\
+        36      & 8.92  & 6.46  \\
+        38      & 8.91  & 6.57  \\
+        40      & 8.89  & 6.77  \\
+        42      & 8.89  & 7.01  \\
+        44      & 8.9   & 7.25  \\
+        46      & 8.9   & 7.53  \\
+        48      & 8.89  & 7.81  \\
+        50      & 6.74  & 5.9   \\
+        52      & 6.76  & 6.23  \\
         \bottomrule
     \end{tabular}
 \end{table}
 \noindent Diese Werte werden in Abbildung \ref{fig:plot3} aufgetragen und gemäß der Vorschrift aus Gleichung \eqref{eq:ausl}
-wird ein Curve-Fit erstellt und ist ebenfalls aufgetragen.
+wird ein Curve-Fit erstellt und ebenfalls aufgetragen.
 \begin{figure}[H]
     \centering
     \includegraphics{build/e_beidseit.pdf}
-    \caption{Messwerte und Ausgleichsgerade für den beidseitige aufliegenden eckigen Stabs.}
+    \caption{Messwerte und Ausgleichsgerade für den beidseitig aufliegenden, eckigen Stabs.}
     \label{fig:plot3}
 \end{figure}
 \noindent Der Fit-Parameter ist hier:
@@ -187,7 +190,7 @@ Das Trägheitsmoment lässt sich gemäß der Gleichung \eqref{eq:fltraegheit} be
     I &= \int y^2z_0 \symup{dy} \\
       &= \frac{y_0^3z_0}{12},
 \end{align}
-wobei $z_0=y_0=\SI{1}{\centi\meter}$ die Abmessungen der Querschnittsfläche des Stabs sind.
+wobei $y_0=z_0=\SI{1}{\centi\meter}$ die Abmessungen der Querschnittsfläche des Stabs sind.
 Der Elastizitätsmodul und seine Unsicherheit lässt sich berechnen mit
 \begin{equation}
     E=\frac{mg}{48IA}
