@@ -1,20 +1,20 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 %
-\subsection{Bestimmung des runden Stabes bei einseitiger Belastung}
+\subsection{Bestimmung des Elastizitätsmoduls eines runden Stabes bei einseitiger Belastung}
 Der Stab wird dabei so eingespannt, dass dieser $50\si{\centi\meter}$ überhängt.
-An diesen wird ein Gewicht von $m_g=742.1\si{\gram}$ angehangen.
+An diesen wird ein Gewicht von $m_g=\SI{742.1}{\gram}$ angehangen.
 Auf den Stab wirkt also eine Kraft von:
 \begin{equation}
-  F= m_g \cdot g = 7.28 \si{\newton}
+  F= m_g \cdot g = \SI{7.28}{\newton}
 \end{equation}
 Die Messung wird wie in Kapitel 2 beschrieben durchgeführt.
-Die so erhaltenen Werte sind in Tabelle\ref{tab:r_einseit} aufgetragen.
+Die so erhaltenen Werte sind in Tabelle \ref{tab:r_einseit} aufgetragen.
 \begin{table}[H]
     \centering
-    \caption{Messwerte des Gravitationsaufbaus.}
+    \caption{Messwerte des runden Stabs bei einseitiger Belastung.}
     \label{tab:r_einseit}
-    \begin{tabular}{S[table-format=2.1(0)e0] S[table-format=1.2(0)e0] S[table-format=1.3(0)e0] }
+    \begin{tabular}{S[table-format=1.0] S[table-format=2.2] S[table-format=2.2] }
         \toprule
         {$x/\si{\centi\meter}$} & {$D_0/\si{\milli\meter}$} & {$D_m/\si{\milli\meter}$} \\
         \midrule
@@ -44,17 +44,17 @@ Die so erhaltenen Werte sind in Tabelle\ref{tab:r_einseit} aufgetragen.
         \bottomrule
     \end{tabular}
 \end{table}
-Die Werte für $D(x)$ und $g(x)=Lx^2-\frac{x^3}{3}$ sind in Abbildung\ref{fig:plot1} aufgetragen.
-Durch diese wurde eine Ausgleichsgerade ,mittels linearer Regression, gezogen.
+\noindent Die Werte für $D(x)$ und $g(x)=Lx^2-\frac{x^3}{3}$ sind in Abbildung \ref{fig:plot1} aufgetragen.
+Durch diese wurde eine Ausgleichsgerade mittels linearer Regression gezogen.
 \begin{figure}
     \centering
     \includegraphics{build/r_einseit.pdf}
-    \caption{Messwerte und Ausgleichsgerade für die einseitige Belastung des ruden Stabs}
+    \caption{Messwerte und Ausgleichsgerade für die einseitige Belastung des ruden Stabs.}
     \label{fig:plot1}
 \end{figure}
 %
-Die Ausgleichsgerade besitzt eine Steigung von $m=(0.0475\pm 0.001)\si{\per\meter\squared}$
-Das Elastizitätsmodul lässt sich mit Formel durch
+Die Ausgleichsgerade besitzt eine Steigung von $m=\SI[per-mode=reciprocal]{0.0475\pm 0.001}{\per\meter\squared}$.
+Der Elastizitätsmodul lässt sich nach Gleichung \eqref{eq:e_aus} durch
 \begin{equation}
   E=\frac{F}{2mI}
 \end{equation}
@@ -67,22 +67,23 @@ Aufgrund der Symetrie werden Zylinderkoordinaten verwendet:
 Der Stab besitzt einen Durchmesser von $Q=1\si{\centi\meter}$.
 Damit ergibt sich ein FläFlächenträgheitsmoment von:
 \begin{equation*}
-  I=4.91\cdot 10^{-10} \si{\meter}^4
+  I=\SI{4.91e-10}{\meter\tothe{4}}
 \end{equation*}
 Mit den so errechneten Werten ergibt sich ein Elastizitätsmodul von:
 \begin{equation*}
   E=(1.561\pm0.0657)10^{11}\si{\newton\per\meter\squared}
 \end{equation*}
-\subsection{Bestimmung des eckigen Stabes bei einseitiger Belastung}
+Die Abweichung errechnet sich hier über Gaußsche Fehlerfortpflanzung.
+\subsection{Bestimmung des Elastizitätsmoduls eines eckigen Stabes bei einseitiger Belastung}
 Analog zum runden Stab gestaltet sich die Messung für den eckigen Stab.
-An diesen wird die Auslenkung über ein Gewicht mit der Masse $m_g=1211.5\si{\gram}$ realisiert.
-Auf den Stab wirkt dann eine Kraft von $F=11.88\si{\newton}$.
-Die erhaltenen Messwerte aus Tabelle\ref{tab:e_einseit} sind in Abbildung\ref{fig:plot2} aufgetragen.
+An diesen wird die Auslenkung über ein Gewicht mit der Masse $m_g=\SI{1211.5}{\gram}$ realisiert.
+Auf den Stab wirkt dann eine Kraft von $F=\SI{11.88}{\newton}$.
+Die erhaltenen Messwerte aus Tabelle \ref{tab:e_einseit} sind in Abbildung \ref{fig:plot2} aufgetragen.
 \begin{table}[H]
     \centering
-    \caption{Messwerte des Gravitationsaufbaus.}
+    \caption{Messwerte des eckigen Stabs bei einseitiger Belastung.}
     \label{tab:e_einseit}
-    \begin{tabular}{S[table-format=2.1(0)e0] S[table-format=1.2(0)e0] S[table-format=1.3(0)e0] }
+    \begin{tabular}{S[table-format=1.0] S[table-format=2.2] S[table-format=2.2] }
         \toprule
         {$x/\si{\centi\meter}$} & {$D_0/\si{\milli\meter}$} & {$D_m/\si{\milli\meter}$} \\
         \midrule
@@ -115,21 +116,22 @@ Die erhaltenen Messwerte aus Tabelle\ref{tab:e_einseit} sind in Abbildung\ref{fi
 \begin{figure}[H]
     \centering
     \includegraphics{build/e_einseit.pdf}
-    \caption{Messwerte und Ausgleichsgerade für die einseitige Belastung des eckigen Stabs}
+    \caption{Messwerte und Ausgleichsgerade für die einseitige Belastung des eckigen Stabs.}
     \label{fig:plot2}
 \end{figure}
-In Abbidung\ref{fig:plot2} ist zusätzlich noch eine Ausgleichsgerade, mit einer Steigung $m=(0.0545\pm0.001)\si{\per\meter\squared}$, aufgetragen.
+In Abbidung \ref{fig:plot2} ist zusätzlich noch eine Ausgleichsgerade, mit einer Steigung $m=\SI[per-mode=reciprocal]{0.0545\pm0.001}{\per\meter\squared}$, aufgetragen.
 Der Stab besitzt ein Flächenträgheitsmoment von:
 \begin{equation*}
-  I=\int_0^Q y^2 dq(y) = \frac{1}{12}\cdot (0.01)^4\si{\meter} = 8.33\cdot 10^{-10}\si{\meter}^4
+  I=\int_Q y^2 dq(y) = \frac{1}{12}\cdot (0.01)^4\si{\meter} = 8.33\cdot 10^{-10}\si{\meter}^4
 \end{equation*}
 Der Stab besitzt ein Elastizitätsmodul von:
 \begin{equation*}
   E= (1.308\pm 0.048)\cdot10^{11} \si{\newton\per\meter\squared}
 \end{equation*}
+Die Abweichung errechnet sich hier über Gaußsche Fehlerfortpflanzung.
 %
 \subsection{Bestimmung des Elastizitätsmoduls mihilfe eine beiseitig aufliegenden Stabs}
-Im Gegensatz zu den vorausgegangenen Messungen ist die überstehende Länge des Stabs hier nicht $\SI{50}{\centi\meter}$, 
+Im Gegensatz zu den vorausgegangenen Messungen ist die überstehende Länge des Stabs hier nicht $\SI{50}{\centi\meter}$,
 sondern $\SI{100000000}{\centi\meter}$.
 Das Gewicht wurde aufgrund der geringen Auslenkung so groß wie möglich gewählt, hier \SI{1000000}{\gram}.
 Es ergeben sich folgende, in Tabelle \ref{tab:eckig_beidseit} aufgetragene, Werte:
@@ -168,7 +170,7 @@ Es ergeben sich folgende, in Tabelle \ref{tab:eckig_beidseit} aufgetragene, Wert
         \bottomrule
     \end{tabular}
 \end{table}
-\noindent Diese Werte werden in Abblindung \ref{fig:dubbi} aufgetragen und gemäß der Vorschrift aus Gleichung \eqref{eq:dubbi} 
+\noindent Diese Werte werden in Abblindung \ref{fig:dubbi} aufgetragen und gemäß der Vorschrift aus Gleichung \eqref{eq:dubbi}
 wird ein Curve-Fit erstellt und ist ebenfalls aufgetragen.
 Der Fit-Parameter ist hier:
 \begin{equation}
