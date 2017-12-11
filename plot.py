@@ -14,7 +14,7 @@ mpl.rcParams.update({
 
 data = np.genfromtxt('content/rund_einseit.txt', unpack=True)
 
-x = 0.5 * (data[0] /100)**2 - (data[0] / 300)**3
+x = 0.5 * (data[0] /100)**2 - ((data[0] / 100)**3)/3
 y= (data[1] -data[2]) /1000
 
 plt.xlabel(r'$g(x)/\si{\cubic\meter}$')
@@ -44,7 +44,7 @@ plt.clf()
 
 data = np.genfromtxt('content/eckig_einseit.txt', unpack=True)
 
-x = 0.5 * (data[0] /100)**2 - (data[0] / 300)**3
+x = 0.5 * (data[0] /100)**2 - ((data[0] / 100)**3)/3
 y= (data[1] -data[2]) /1000
 
 plt.xlabel(r'$g(x)/\si{\cubic\meter}$')
@@ -78,16 +78,16 @@ data = np.genfromtxt("content/eckig_beidseit.txt", unpack=True)
 data[0] /= 100
 data[1] /= 1000
 data[2] /= 1000
-L = 0.55
+L = 0.555
 mitte = data[0][int(data[0].size/2)]
 
 def g(x, A):
     y = np.array([])
     for i in x:
         if(i <= mitte):
-            y = np.append(y, A*(3*L**2*i-4*i**3))
+            y = np.append(y, A*(3*i*L**2-4*i**3))
         else:
-            y = np.append(y, A*(4*i**3-12*L*i**2+9*L**2*i-L**3))
+            y = np.append(y, A*(4*i**3-12*L*i**2+9*i*L**2-L**3))
     return y
 
 data[1] -= data[2]

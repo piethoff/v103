@@ -130,10 +130,10 @@ Der Stab besitzt ein Elastizitätsmodul von:
 \end{equation*}
 Die Abweichung errechnet sich hier über Gaußsche Fehlerfortpflanzung.
 %
-\subsection{Bestimmung des Elastizitätsmoduls mihilfe eine beiseitig aufliegenden Stabs}
-Im Gegensatz zu den vorausgegangenen Messungen ist die überstehende Länge des Stabs hier nicht $\SI{50}{\centi\meter}$,
-sondern $\SI{100000000}{\centi\meter}$.
-Das Gewicht wurde aufgrund der geringen Auslenkung so groß wie möglich gewählt, hier \SI{1000000}{\gram}.
+\subsection{Bestimmung des Elastizitätsmoduls mihilfe eines beiseitig aufliegenden Stabs}
+Im Gegensatz zu den vorausgegangenen Messungen ist die überstehende Länge des Stabs hier nicht $\SI{50}{\centi\meter}$, 
+sondern $\SI{55.5}{\centi\meter}$.
+Das Gewicht wurde aufgrund der geringen Auslenkung so groß wie möglich gewählt, hier $m=\SI{4699.8}{\gram}$.
 Es ergeben sich folgende, in Tabelle \ref{tab:eckig_beidseit} aufgetragene, Werte:
 \begin{table}[H]
     \centering
@@ -170,19 +170,33 @@ Es ergeben sich folgende, in Tabelle \ref{tab:eckig_beidseit} aufgetragene, Wert
         \bottomrule
     \end{tabular}
 \end{table}
-\noindent Diese Werte werden in Abblindung \ref{fig:dubbi} aufgetragen und gemäß der Vorschrift aus Gleichung \eqref{eq:dubbi}
+\noindent Diese Werte werden in Abbildung \ref{fig:plot3} aufgetragen und gemäß der Vorschrift aus Gleichung \eqref{eq:dubbi} 
 wird ein Curve-Fit erstellt und ist ebenfalls aufgetragen.
-Der Fit-Parameter ist hier:
+\begin{figure}[H]
+    \centering
+    \includegraphics{build/e_beidseit.pdf}
+    \caption{Messwerte und Ausgleichsgerade für den beidseitige aufliegenden eckigen Stabs.}
+    \label{fig:plot3}
+\end{figure}
+\noindent Der Fit-Parameter ist hier:
 \begin{equation}
-    A = \frac{F}{48EI} = \SI{999.99\pm999}{\per\meter\squared}
+    A = \frac{F}{48EI} = \SI{16.71e-3\pm0.13}{\per\meter\squared}
 \end{equation}
 Das Trägheitsmoment lässt sich gemäß der Gleichung \eqref{eq:dubbi} berechnen und ergibt sich zu
 \begin{align}
-    I &= \int y^2*z0 \symup{dy} \\
+    I &= \int y^2z_0 \symup{dy} \\
       &= \frac{y_0^3z_0}{12},
 \end{align}
-wobei $z_0=\SI{999}{\centi\meter}$ und $y_0=\SI{999}{\centi\meter}$ die Abmessungen der Querschnittsfläche des Stabs sind.
-Es ergibt sich somit ein Elastizitätsmodul von
+wobei $z_0=y_0=\SI{1}{\centi\meter}$ die Abmessungen der Querschnittsfläche des Stabs sind.
+Der Elastizitätsmodul und seine Unsicherheit lässt sich berechnen mit
 \begin{equation}
-    E = \SI{999}{\newton\per\meter\squared}.
+    E=\frac{mg}{48IA}
+\end{equation}
+und
+\begin{equation}
+    \symup{\Delta}E=\frac{mg}{48IA^2}\symup{\Delta}.
+\end{equation}
+Es ergibt sich somit ein Wert von
+\begin{equation}
+    E = \SI{1\pm1}{\newton\per\meter\squared}.
 \end{equation}
