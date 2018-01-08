@@ -2,13 +2,13 @@
 \label{sec:Auswertung}
 %
 \subsection{Bestimmung der Materialien}
-Es wird zunächst das Material der verwendeten Stäbe untersucht. Dazu wird die Dichte des Stabs nach 
+Es wird zunächst das Material der verwendeten Stäbe untersucht. Dazu wird die Dichte des Stabs nach
 folgender Formel berechnet:
 \begin{equation}
     \rho = \frac{m}{V}
 \end{equation}
 Für einen zylindrischen Stab gilt $V=\frac{\pi d^2}{4}l$, mit $d$ als Durchmesser und $l$ als gesamte Stablänge.
-Das Volumen eines quaderförmigen Stab folgt nach $V=a\, b\, l$, mit $a$ und $b$ als Kantenlänge und $l$ 
+Das Volumen eines quaderförmigen Stab folgt nach $V=a\, b\, l$, mit $a$ und $b$ als Kantenlänge und $l$
 als gesamte Stablänge.
 %
 \begin{table}[H]
@@ -17,21 +17,21 @@ als gesamte Stablänge.
     \label{tab:dim}
     \begin{tabular}{cSSSSSS}
         \toprule
-        {Stab} & 
-        {$d/\si{\centi\meter}$} & 
-        {$a/\si{\centi\meter}$} & 
-        {$b/\si{\centi\meter}$} & 
+        {Stab} &
+        {$d/\si{\centi\meter}$} &
+        {$a/\si{\centi\meter}$} &
+        {$b/\si{\centi\meter}$} &
         {$l/\si{\centi\meter}$} &
         {$m/\si{\gram}$} &
         {$\rho/\si{\gram\per\centi\meter\cubed}$} \\
-        {runder Stab}     & \\ 
-        {eckiger Stab}  & \\
+        {runder Stab}     & 1.0 & / & / &57.5 & 379.2 & 8.39 \\
+        {eckiger Stab}  & / & 1.0 & 1.0 & 59.1 & 164.1 & 2.78  \\
     \end{tabular}
 \end{table}
 \noindent
-Die Dichte des runden Stabs ist vergleichbar mit einem Literaturwert von Messing, was auch die äußere 
-Erscheinung nahe legt. Beim Material des eckigen Stabs, schein es sich der Dichte nach um Aluminium zu 
-handeln. 
+Die Dichte des runden Stabs ist vergleichbar mit dem Literaturwert von Messing, nämlich $\rho_\text{Lit} =\SI{8.4}{\gram\per\centi\meter\cubed}$\cite{mess}. Dies legt auch die äußere
+Erscheinung nahe. Beim Material des eckigen Stabs ist davon auszugehen, dass es sich um Aluminium handelt.
+Für die Dichte von Aluminium findet sich ein Literaturwert von $\rho_\text{Lit} =\SI{2.7}{\gram\per\centi\meter\cubed}$\cite{alu}.
 %
 \subsection{Bestimmung des Elastizitätsmoduls eines runden Messingtabs bei einseitiger Belastung}
 Der Stab wird dabei so eingespannt, dass dieser $\SI{50}{\centi\meter}$ überhängt.
@@ -206,9 +206,9 @@ Es ergeben sich folgende, in Tabelle \ref{tab:eckig_beidseit} aufgetragene, Wert
     \end{tabular}
 \end{table}
 \noindent Diese Werte werden in Abbildung \ref{fig:plot3} aufgetragen und gemäß der Vorschrift aus Gleichung \eqref{eq:ausl}
-wird ein Curve-Fit erstellt und ebenfalls aufgetragen. Dieser wird im Gegensatz zu den vorigen 
-Messreihen nicht linearisiert, da die Funktionsvorschrift nicht in geschlossener Form vorliegt. Eine 
-separate Betrachtung beider Stabhälften wäre möglich, jedoch würde dies die Güte des Curve-Fits 
+wird ein Curve-Fit erstellt und ebenfalls aufgetragen. Dieser wird im Gegensatz zu den vorigen
+Messreihen nicht linearisiert, da die Funktionsvorschrift nicht in geschlossener Form vorliegt. Eine
+separate Betrachtung beider Stabhälften wäre möglich, jedoch würde dies die Güte des Curve-Fits
 beeinträchtigen. Daher wird eine nicht lineare Regression verwendet.
 \begin{figure}[H]
     \centering
