@@ -2,12 +2,36 @@
 \label{sec:Auswertung}
 %
 \subsection{Bestimmjng der Materialien}
-Es wird zunächst das Material der verwendeten Stäbe untersucht. Dazu wird die Dichte des Stabs nach folgender Formel berechnet:
+Es wird zunächst das Material der verwendeten Stäbe untersucht. Dazu wird die Dichte des Stabs nach 
+folgender Formel berechnet:
 \begin{equation}
-    \frac{m}{V}
+    \rho = \frac{m}{V}
 \end{equation}
 Für einen zylindrischen Stab gilt $V=\frac{\pi d^2}{4}l$, mit $d$ als Durchmesser und $l$ als gesamte Stablänge.
-Für einen quaderförmigen Stab gilt $V=a\, b\, l$, mit $a$ und $b$ als Kantenlänge  und $l$ als gesamte Stablänge.
+Das Vokumen eines quaderförmigen Stab folgt nach $V=a\, b\, l$, mit $a$ und $b$ als Kantenlänge und $l$ 
+als gesamte Stablänge.
+%
+\begin{table}
+    \centering
+    \caption{Dimensionen der Stäbe.}
+    \label{tab:dim}
+    \begin{tabular}{cSSSSSS}
+        \toprule
+        {Stab} & 
+        {$d/\si{\centi\meter}$} & 
+        {$a/\si{\centi\meter}$} & 
+        {$b/\si{\centi\meter}$} & 
+        {$l/\si{\centi\meter}$} &
+        {$m/\si{\gram}$} &
+        {$\rho/\si{\gram\per\centi\meter\cubed}$} \\
+        {runder Stab}     & \\ 
+        {eckiger Stab}  & \\
+    \end{tabular}
+\end{table}
+\noindent
+Die Dichte des runden Stabs ist vergleichbar mit einem Literaturwert von Messing, was auch die äußere 
+Erscheinung nahe legt. Beim Material des eckigen Stabs, schein es sich der Dichte nach um Aluminium zu 
+handeln. 
 %
 \subsection{Bestimmung des Elastizitätsmoduls eines runden Messingtabs bei einseitiger Belastung}
 Der Stab wird dabei so eingespannt, dass dieser $\SI{50}{\centi\meter}$ überhängt.
@@ -182,7 +206,10 @@ Es ergeben sich folgende, in Tabelle \ref{tab:eckig_beidseit} aufgetragene, Wert
     \end{tabular}
 \end{table}
 \noindent Diese Werte werden in Abbildung \ref{fig:plot3} aufgetragen und gemäß der Vorschrift aus Gleichung \eqref{eq:ausl}
-wird ein Curve-Fit erstellt und ebenfalls aufgetragen.
+wird ein Curve-Fit erstellt und ebenfalls aufgetragen. Dieser wird im Gegensatz zu den vorigen 
+Messreihen nicht linearisiert, da die Funktionsvorschrift nicht in geschlossener Form vorliegt. Eine 
+separate Betrachtung beider Stabhälften wäre möglich, jedoch würde dies die Güte des Curve-Fits 
+beeinträchtigen. Daher wird eine nicht lineare Regression verwendet.
 \begin{figure}[H]
     \centering
     \includegraphics{build/e_beidseit.pdf}
